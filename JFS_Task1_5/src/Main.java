@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
+// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int amount = sc.nextInt();
+        int totalPayable = 0;
+
+        if (amount < 500) {
+            totalPayable = amount;
+        } else if (amount > 500 && amount < 1000) {
+            totalPayable = amount * 10 / 100;
+        } else if (amount > 1000) {
+            totalPayable = amount * 20 / 100;
+        }
+
+        System.out.println("Total Payable amount is: " + totalPayable);
+    }
+}
